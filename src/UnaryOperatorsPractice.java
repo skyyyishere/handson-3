@@ -172,24 +172,45 @@ public class UnaryOperatorsPractice {
 
         // Latihan 8: Skenario increment/decrement kompleks
         // - Buat variabel 'value' dengan nilai awal 5
+        int value = 5;
 
         // - Hitung dan simpan hasil dari: value++ + ++value
         // Print kedua hasil dan nilai akhir dari 'value'
+        int resultA= value++ + ++value;
+        System.out.println("Hasil value++ + ++value = " + resultA);
+        System.out.println("Nilai akhir value: " + value);
 
         // - Reset value ke 5, lalu hitung: --value + value--
         // Print kedua hasil dan nilai akhir dari 'value'
+        value = 5;
+        int resultB = --value + value--;
+        System.out.println("Hasil --value + value-- = " + resultB);
+        System.out.println("Nilai akhir value: " + value);
 
         // - Prediksi hasilnya sebelum menjalankan dan tambahkan komentar dengan prediksi Anda
 
         // Latihan 9: Increment/Decrement dengan pemanggilan method
         // - Buat variabel 'score' dengan nilai 10
+        int score = 10;
 
         // - Print hasil dari Math.max(++score, 12)
         // Kemudian print nilai score saat ini
+        int max1 = Math.max(++score, 12);
+        System.out.println("Math.max(++score, 12) = " + max1);
+        System.out.println("Nilai score sekarang: " + score);
 
         // - Reset score ke 10, lalu print hasil dari Math.max(score++, 12)
         // Kemudian print nilai score saat ini
+        score = 10;
+        int max2 = Math.max(score++, 12);
+        System.out.println("Math.max(score++, 12) = " + max2);
+        System.out.println("Nilai score sekarang: " + score);
 
         // - Komentari perbedaan perilaku yang Anda amati
+        /*
+          Perbedaan:
+          - untuk ++score, nilai score sudah bertambah sebelum dipakai
+          - untuk score++, nilai score dipakai dulu lalu bertambah
+         */
     }
 }
